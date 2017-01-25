@@ -7,7 +7,9 @@ function roll() {
 
 //user interface logic
 $(document).ready(function() {
+  var roundTotal = 0;
   $("#roll").click(function() {
-    $("#round-total").text(roll());
+    roundTotal +=roll()
+    $("#round-total").text(roundTotal);
   })
 })
