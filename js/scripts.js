@@ -1,6 +1,7 @@
 //business logic
 var roundTotal = 0;
 var totalScore = 0;
+var winningScore = 10;
 function roll() {
   var currentRoll = Math.ceil(Math.random() * 6);
   if (currentRoll === 1) {
@@ -17,7 +18,11 @@ function hold() {
   return totalScore;
 }
 
-
+function checkVictory() {
+  if (totalScore + roundTotal >= winningScore) {
+    $("#win").text("Congrats, you won!");
+  }
+}
 
 //user interface logic
 $(document).ready(function() {
@@ -26,6 +31,7 @@ $(document).ready(function() {
     var thisRoll = roll();
     $("#last-roll").text(thisRoll);
     $("#round-total").text(roundTotal);
+    checkVictory();
   })
   $("#hold").click(function(){
     var total = hold();
