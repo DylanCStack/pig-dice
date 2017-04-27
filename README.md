@@ -8,7 +8,7 @@
 
 A dice based game between multiple players competing to reach 100 points. Points are accumulated every round until a player holds or rolls a one, in which case they gain no points.
 
-##Specifications:
+## Specifications:
 1. it will have a roll button which will return a number from a balanced six sided die.
 2. it will display a total of all previous rolls
 3. if a 1 is rolled the current total is returned to 0
